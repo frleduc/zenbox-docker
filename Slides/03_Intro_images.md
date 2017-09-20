@@ -45,7 +45,9 @@ Noyau linux : primitives implémentées depuis 2008
 
 ## Standing on the shoulders of giant
 
-![](ressources/docker-isolation-small.png)
+<figure style="position: absolute; bottom: 20px;">
+    <img src="ressources/docker-isolation-small.png" alt="docker-libs" />
+</figure>
 
 
 Notes :
@@ -77,18 +79,13 @@ AppArmor ("Application Armor") is a Linux kernel security module that allows the
 
 ## Basics
 
-<br/>
-L'image contient le nécessaire pour faire fonctionner le conteneur.
-
-<br/>
-Le cycle de vie d'un conteneur est directement lié à l'exécution de la commande principale.
-
-<br/>
-Droit root par défaut dans un conteneur.
-
-<br/>
-Philosophie : Un seul et unique service (apache, tomcat, nginx, redis...) s'exécute dans un conteneur.
-
+-  L'image contient le nécessaire pour faire fonctionner le conteneur.
+<br /><br />
+- Le cycle de vie d'un conteneur est directement lié à l'exécution de la commande principale.
+<br /><br />
+- Droit root par défaut dans un conteneur.
+<br /><br />
+- Philosophie : Un seul et unique service (apache, tomcat, nginx, redis...) s'exécute dans un conteneur.
 
 Notes :
 Complétement isolé et n'a pas accès par défaut à la machine hôte ni aux autres conteneurs (comme les VMs)

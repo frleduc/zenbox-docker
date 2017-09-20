@@ -8,19 +8,21 @@
 
 ## Principes
 
-Gère des clusters d'hôte docker
+ - Gère des clusters d'hôte docker
+ <br /><br />
 
-Basé sur l'API de docker (compatible avec compose)
+ - Basé sur l'API de docker (compatible avec compose)
 
-  1. ouvrir le daemon docker sur TCP
-  2. configurer TLS
-  3. 1 manager
-  4. x nodes
+  * ouvrir le daemon docker sur TCP
+  * configurer TLS
+  * 1 manager
+  * x nodes
+<br /><br />
 
-<br/>
-La création / répartition des conteneur est à la charge de swarm
+ - La création / répartition des conteneur est à la charge de swarm
+<br /><br />
 
-Aléatoire / Répartition de charge / Contraintes
+ - Aléatoire / Répartition de charge / Contraintes
 
 
 
