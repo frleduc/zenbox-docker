@@ -1,18 +1,18 @@
 {
-  "name": "Docker-Insight",
-  "description": "Docker Insight",
+  "name": "zenbox-docker",
+  "description": "ZenBox Docker",
   "version": "0.1.0",
   "author": "Zenika",
-  "homepage": "http://zenikaouest.github.io/talk-docker-insight",
+  "homepage": "https://github.com/Zenika/zenbox-docker",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ZenikaOuest/talk-docker-insight"
+    "url": "https://github.com/Zenika/zenbox-docker"
   },
   "private": true,
   "dependencies": {
     "grunt": "^0.4.5",
     "gulp": "^3.9.0",
-    "zenika-formation-framework": "git+https://github.com/Zenika/Formation--Framework.git#theme_integ"
+    "zenika-formation-framework": "^3.0.0"
   },
   "config": {
     "deploy": {
