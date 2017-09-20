@@ -1,21 +1,12 @@
 # Docker Insight
 
 <figure style="position: absolute; bottom: 150px; right: 300px; with: 100%">
-    <img src="ressources/dockercon-bzh.png" alt="Logo Docker"/>
+    <img width="80%" src="ressources/DockerLogo.png" alt="Logo Docker"/>
 </figure>
 
 <!-- .slide: class="page-title" -->
 
-
-
-## @m_pousse
-
-- Mathieu POUSSE
-- Formateur Docker @zenika
-- Consultant chez Yves Rocher
-- Dev ⇨ Ops
-- Java ⇨ Docker
-- OSS contributor
+Slides forked from @m_pousse, @ggerbaud, @jlandure, @Nebounet, @acogoluegnes - Zenika Rennes, Nantes & Lyon
 
 
 
@@ -29,24 +20,11 @@
 
 
 
-## &nbsp;
 
-Présentation: https://zenikaouest.github.io/talk-docker-insight/ 
+## @srevereault
 
-<hr/>
-
-Sources: https://github.com/ZenikaOuest/talk-docker-insight
-
- - node
- - npm
- - grunt
- - gulp
- - reveal.js
-
-<br/>
-```
-git clone https://github.com/ZenikaOuest/talk-docker-insight
-make
-```
-
-
+- Sylvain Révéreault
+- Consultant DevOps, Infra as Code, Cloud Computing
+- Directeur technique Zenika Rennes
+- (presque) Formateur Docker @zenika
+- Ops ⇨ <span style="font-size: 0.5em">Dev</span>

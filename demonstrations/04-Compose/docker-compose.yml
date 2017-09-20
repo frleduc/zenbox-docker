@@ -1,16 +1,19 @@
-#backend
+# DB // Cache
+cache:
+  image: redis
+
+# Backend
 back:
   image: maven:3.3.3-jdk-8
   command: mvn clean spring-boot:run
-  ports:
-    - "8080:8080"
   volumes:
     - ~/.m2:/root/.m2
     - ./back/:/usr/src/app
   working_dir: /usr/src/app
   links:
     - cache:redis
-# frontend
+
+# Frontend
 front:
   build: front/
   ports:
@@ -19,6 +22,3 @@ front:
     - ./front/static/:/usr/src/app/static/
   links:
     - back:api
-# cache or db
-cache:
-  image: redis

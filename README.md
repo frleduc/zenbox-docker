@@ -1,5 +1,25 @@
 Checkout http://zenikaouest.github.io/talk-docker-insight/
 
+# Pour imprimer
+- Lancer `grunt package`
+- Puis modifier le run.xxxxxx.js dans `dist/reveal`
+```js
+  var config = {
+    revealTheme: '/reveal/theme-zenika/',
+    revealModule: 'node_modules/reveal.js/'
+  };
+
+  // fileExists('node_modules/reveal.js/css/reveal.min.css')
+  //   .then(function () {
+  //     // NPM 3
+  //     config.revealModule = 'reveal.js/';
+  //   })
+  //   .catch(function () {
+  //     // NPM 2
+  //     config.revealModule = 'node_modules/reveal.js/';
+  //   });
+```
+
 #Plan présentation Docker
 
 ## Docker, kézako ?

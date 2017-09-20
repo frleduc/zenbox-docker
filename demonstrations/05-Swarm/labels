@@ -1,3 +1,2 @@
 traefik.backend=back
-traefik.frontend.rule=Methods
-traefik.frontend.value=GET
+traefik.frontend.rule=Host:demo.zenika.com

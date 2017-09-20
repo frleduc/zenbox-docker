@@ -1,8 +1,11 @@
-# docker ecosystème
+# écosystème Docker
 
 <figure style="position: absolute; bottom: 10px; right: 200px">
     <img src="ressources/ecosystem.jpg" alt="Logo Docker" width="650" />
 </figure>
+
+Notes :
+L'ensemble des outils ci après sont OSS et gratuits
 
 
 
@@ -16,10 +19,10 @@
 
 ## Use case
 
-Permet de démarrer plusieurs containers simultanement
+Permet de démarrer plusieurs conteneurs simultanément
 
 <br/>
-Idéal pour le developpement
+Idéal pour le développement
 
 <br/>
 Fichier de configuration yaml simple
@@ -28,7 +31,7 @@ Fichier de configuration yaml simple
 Image, liens, volumes, # instances
 
 <br/>
-Controle un ensemble cohérent de container
+Contrôle un ensemble cohérent de conteneurs
 
 
 
@@ -55,6 +58,15 @@ redis:
 
 
 
+# docker registry
+
+<figure style="position: absolute; bottom: 200px; right: 200px">
+    <img src="ressources/docker-registry.png" alt="Docker Registry" width="800" />
+</figure>
+
+
+
+
 # docker machine
 
 <figure style="position: absolute; bottom: 50px; right: 400px">
@@ -63,10 +75,19 @@ redis:
 
 
 
+# docker machine, cas d'utilisation
+
+<br/><br/><br/><br/><br/><br/>
+Pour utiliser Docker facilement sous Mac et Windows
+
+Pour installer Docker sur des machines distantes (des "machines")
+
+
+
 # docker machine
 
 <br/><br/><br/><br/><br/>
-Easy setup & well configured for Linux, Windows, MacOS, Google, AWS, ...
+Installation et configuration simple pour Linux, Windows, MacOS, Google, AWS, ...
 
 <figure style="position: absolute; bottom: 50px; right: 150px">
     <img src="https://docs.docker.com/engine/installation/images/linux_docker_host.svg" alt="Logo Docker" />
@@ -80,6 +101,9 @@ Easy setup & well configured for Linux, Windows, MacOS, Google, AWS, ...
 
 # docker kitematic
 
+<br/><br/><br/><br/><br/>
+GUI de gestion pour Mac et Windows
+
 <figure style="position: absolute; bottom: 150px; right: 250px">
     <img src="https://pbs.twimg.com/profile_images/505211933666975745/ZyasF8Em_400x400.png" alt="Logo Docker" width="350" />
 </figure>
@@ -89,19 +113,19 @@ Easy setup & well configured for Linux, Windows, MacOS, Google, AWS, ...
 
 
 
-## gui for docker #1
+## kitematic, gui for docker #1
 
 ![](ressources/kitematic-browse-images.png)
 
 
 
-## gui for docker #2
+## kitematic, gui for docker #2
 
 ![](ressources/kitematic-cli-redis-container.png)
 
 
 
-## gui for docker #3
+## kitematic, gui for docker #3
 
 ![](ressources/kitematic-volumes-dir.png)
 
@@ -109,8 +133,9 @@ Easy setup & well configured for Linux, Windows, MacOS, Google, AWS, ...
 
 # docker toolbox
 
+<br/><br/><br/><br/><br/>
+Pour Mac et Windows. Inclut Docker, Compose, Machine, Kitematic.
+
 <figure style="position: absolute; bottom: 150px; right: 350px">
     <img src="https://www.docker.com/sites/default/files/products/tbox.jpg" alt="Logo Docker" />
 </figure>
-
-

@@ -18,9 +18,9 @@ Basé sur l'API de docker (compatible avec compose)
   4. x nodes
 
 <br/>
-La création / répartition des containers est à la charge de swarm
+La création / répartition des conteneur est à la charge de swarm
 
-Aléatoire / Répartition de charge / Contraintes 
+Aléatoire / Répartition de charge / Contraintes
 
 
 
