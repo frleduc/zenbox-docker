@@ -139,9 +139,9 @@ The VOLUME instruction creates a mount point with the specified name and marks i
 
 <br/>
 ```
-$ docker container run docker/whalesay cowsay "big up @Technicolor"
+$ docker container run docker/whalesay cowsay "big up @TalentSoft"
  _____________________
-< big up @Technicolor >
+< big up @TalentSoft >
  ---------------------
     \
      \
@@ -246,7 +246,7 @@ docker container start <container-name-or-id>
 
 # Résumé
 
-![](https://docs.docker.com/v1.8/article-img/architecture.svg)
+![](https://docs.docker.com/engine/article-img/architecture.svg)
 
 
 
