@@ -9,6 +9,9 @@
     "url": "https://github.com/Zenika/zenbox-docker"
   },
   "private": true,
+  "scripts": {
+    "start": "grunt"
+  },
   "dependencies": {
     "grunt": "^0.4.5",
     "gulp": "^3.9.0",
