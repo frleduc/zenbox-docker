@@ -156,6 +156,12 @@ $ docker container run docker/whalesay cowsay "big up @TalentSoft"
 
 
 
+# Demo time
+
+![](ressources/fingers-crossed.png)
+
+
+
 ## En pratique
 
 - Docker récupère ("pull") les couches de filesystem read-only
@@ -185,7 +191,6 @@ Options:
  - ``--rm``: pour supprimer le conteneur après exécution
  - ``-p``: publication de port `<host>:<container>`
  - ``--volume``: gestion des volumes
- - ``--link``: gestion des links
  - ``--net``: gestion du réseau
 
 Notes :
