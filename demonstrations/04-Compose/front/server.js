@@ -5,7 +5,7 @@ var app = express();
 app.use('/', express.static('static'));
 app.use('/api', proxy('api:8080', {
   filter: function(req, res) {
-    console.log(req);
+    //console.log(req);
      return true;
   },
   forwardPath: function(req, res) {

@@ -48,8 +48,8 @@ cd ..
 ```bash
 # pull & run
 docker image pull busybox
-docker container run busybox echo "Hello Technicolor"
-docker container run docker/whalesay cowsay "Hello Technicolor"
+docker container run busybox echo "Hello from Zenika"
+docker container run docker/whalesay cowsay "Hello from Zenika"
 cd 01-First-build
 cat Dockerfile
 docker image build -t wgetip .
@@ -58,6 +58,8 @@ docker container run wgetip ipinfo.io/hostname
 cd ..
 # on lance un tomcat
 docker container run -d -p 8080:8080 tomcat:7
+# on lance un tomcat 8 maintenant ?
+docker container run -d -p 8080:8080 tomcat:8
 # allez dedans et regarder
 docker container exec -ti XX bash
 # on vérifie que ça tourne
@@ -86,27 +88,31 @@ cat Dockerfile
 cat ../XX-Misc/Dockerfile.python-onbuild
 docker image build -t my-killer-app .
 docker container run -d -p 80:5000 -e DEV_MODE=true -v $PWD:/usr/src/app my-killer-app
-curl localhost/hello/Technicolor
+curl localhost/hello/zenika
 ## change the returned message and F5
 vi hello-server.py
 # re curl...
-curl localhost/hello/Technicolor
+curl localhost/hello/zenika
 # remove container
 docker container ls
 docker container rm -f <id>
 cd ..
 ```
 
-## DEMO 3 : Links
+## DEMO 3 : Network
 ```bash
-cd 03-Links
+cd 03-Network
 vi app.py
-docker container run -d --name cache redis
-docker container run -d -p 5000:5000 --link cache:redis --name server ggerbaud/pyredis
+docker image build -t zenika/demo-py-redis .
+docker network create -d bridge mybridge
+docker network ls
+docker container run -d --net mybridge --name redis redis
+# attention sur mac docker container run -d --net mybridge --name redis --sysctl=net.core.somaxconn=511 redis
+# cf https://github.com/docker-library/redis/issues/35
+docker container run -d -p 5000:5000 --net mybridge --name server zenika/demo-py-redis
 curl localhost:5000
 docker container exec -it server bash
-cat /etc/hosts
-ping cache
+ping redis
 # Ctrl + D
 cd ..
 ```

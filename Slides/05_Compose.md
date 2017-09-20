@@ -38,16 +38,16 @@ Contrôle un ensemble cohérent de conteneurs
 ## docker-compose.yml
 
 ```
-web:
-  build: .
-  ports:
-   - "5000:5000"
-  volumes:
-   - .:/code
-  links:
-   - redis
-redis:
-  image: redis
+version: "3"
+services:
+  web:
+    build: .
+    ports:
+     - "5000:5000"
+    volumes:
+     - .:/code
+  redis:
+    image: redis
 ```
 
 
