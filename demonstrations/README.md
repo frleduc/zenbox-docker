@@ -11,7 +11,7 @@ docker-machine create -d digitalocean \
   --digitalocean-region=fra1 \
   demo-keystore
 eval $(docker-machine env demo-keystore)
-docker run -d -p "8500:8500" -h "consul" \
+docker container run -d -p "8500:8500" -h "consul" \
       progrium/consul -server -bootstrap
 ## create main VM
 docker-machine create -d digitalocean \
@@ -47,31 +47,31 @@ cd ..
 
 ```bash
 # pull & run
-docker pull busybox
-docker run busybox echo "Hello Technicolor"
-docker run docker/whalesay cowsay "Hello Technicolor"
+docker image pull busybox
+docker container run busybox echo "Hello Technicolor"
+docker container run docker/whalesay cowsay "Hello Technicolor"
 cd 01-First-build
 cat Dockerfile
-docker build -t wgetip .
-docker run wgetip
-docker run wgetip ipinfo.io/hostname
+docker image build -t wgetip .
+docker container run wgetip
+docker container run wgetip ipinfo.io/hostname
 cd ..
 # on lance un tomcat
-docker run -d -p 8080:8080 tomcat:7
+docker container run -d -p 8080:8080 tomcat:7
 # allez dedans et regarder
-docker exec -ti XX bash
+docker container exec -ti XX bash
 # on vérifie que ça tourne
-docker ps
+docker container ls
 # on l'affiche
 curl http://localhost:8080
 # et aussi http://<ip VM>:8080
 # on stop
-docker stop <id>
+docker container stop <id>
 # il est caché...
-docker ps
+docker container ls
 # ...meuh non
-docker ps -a
-docker start <id>
+docker container ls -a
+docker container start <id>
 ```
 
 ## DEMO 2 : Dev Stack and Volumes
@@ -84,25 +84,27 @@ cd 02-Dev-Env
 cat Dockerfile
 # show original Dockerfile
 cat ../XX-Misc/Dockerfile.python-onbuild
-docker build -t my-killer-app .
-docker run -d -p 80:5000 -e DEV_MODE=true -v $PWD:/usr/src/app my-killer-app
+docker image build -t my-killer-app .
+docker container run -d -p 80:5000 -e DEV_MODE=true -v $PWD:/usr/src/app my-killer-app
 curl localhost/hello/Technicolor
 ## change the returned message and F5
 vi hello-server.py
 # re curl...
-docker ps
-docker rm -f <id>
+curl localhost/hello/Technicolor
+# remove container
+docker container ls
+docker container rm -f <id>
 cd ..
 ```
 
 ## DEMO 3 : Links
 ```bash
-cd O3-Links
+cd 03-Links
 vi app.py
-docker run -d --name cache redis
-docker run -d -p 5000:5000 --link cache:redis --name server ggerbaud/pyredis
+docker container run -d --name cache redis
+docker container run -d -p 5000:5000 --link cache:redis --name server ggerbaud/pyredis
 curl localhost:5000
-docker exec -it server bash
+docker container exec -it server bash
 cat /etc/hosts
 ping cache
 # Ctrl + D
@@ -118,9 +120,10 @@ cd 04-Compose
 vi docker-compose.yml
 # avant plan avec logs (Ctrl+C to quit)
 docker-compose up
+# ouvrir http://localhost
 # arriere plan
-#docker-compose -d up
-#docker-compose stop
+docker-compose -d up
+docker-compose stop
 cd ..
 ```
 
@@ -133,12 +136,12 @@ eval $(docker-machine env --swarm demo-node1)
 # server is swarm
 docker version
 docker info
-docker ps
-docker ps -a
+docker container ls
+docker container ls -a
 # creation d'un network
 docker network create --driver overlay zen-net
 # mise en place de traefik (NOTA : on le fait hors de swarm pour le mettre sur le bon noeud)
-docker $(docker-machine config demo-node1) run \
+docker $(docker-machine config demo-node1) container run \
     -d \
     -p 80:80 -p 8080:8080 \
     --net=zen-net \
@@ -157,13 +160,13 @@ docker $(docker-machine config demo-node1) run \
     --docker.watch  \
     --web
 # on run un ou deux container
-docker run -d --net zen-net --label-file labels ggerbaud/hello-hostname
-docker ps
+docker container run -d --net zen-net --label-file labels ggerbaud/hello-hostname
+docker container ls
 # s'y connecter
 curl -H Host:demo.zenika.com $(docker-machine ip demo-node1)
 # contraintes
 # noeud
-docker run -d --label-file labels -e constraint:node==<mon ip> ggerbaud/hello-hostname
+docker container run -d --label-file labels -e constraint:node==<mon ip> ggerbaud/hello-hostname
 
 # s'il y a du temps, petite demo de Docker Machine
 docker-machine create -d digitalocean \
@@ -188,7 +191,7 @@ docker-machine ssh $(docker-machine active)
 
 ```bash
 cd ..
-docker build -t zenika/docker-insight .
-docker run -it --name talk-docker-insight -v $(PWD)/Slides:/data/Slides -p 8000:8000 zenika/docker-insight
-docker run -it --rm -v $(PWD)/dist/:/data/dist/ -v $(PWD)/Slides:/data/Slides zenika/docker-insight package
+docker image build -t zenika/docker-insight .
+docker container run -it --name talk-docker-insight -v $(PWD)/Slides:/data/Slides -p 8000:8000 zenika/docker-insight
+docker container run -it --rm -v $(PWD)/dist/:/data/dist/ -v $(PWD)/Slides:/data/Slides zenika/docker-insight package
 ```

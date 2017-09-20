@@ -100,7 +100,7 @@ Pas de ssh, pas de Chef ou Vagrant
 
 - Téléchargées depuis un dépôt
 - Importées depuis une archive "tarball" (ubuntu, centos, ...)
-- Construites depuis un `docker commit`
+- Construites depuis un `docker image commit`
 - Construites depuis un *Dockerfile*
 - ...elles sont toujours en lecture seule
 
@@ -139,21 +139,21 @@ The VOLUME instruction creates a mount point with the specified name and marks i
 
 <br/>
 ```
-$ docker run docker/whalesay cowsay "big up @Technicolor"
+$ docker container run docker/whalesay cowsay "big up @Technicolor"
  _____________________
 < big up @Technicolor >
  ---------------------
     \
      \
-      \     
-                    ##        .            
-              ## ## ##       ==            
-           ## ## ## ##      ===            
-       /""""""""""""""""___/ ===        
-  ~~~ {~~ ~~~~ ~~~ ~~~~ ~~ ~ /  ===- ~~~   
-       \______ o          __/            
-        \    \        __/             
-          \____\______/   
+      \
+                    ##        .
+              ## ## ##       ==
+           ## ## ## ##      ===
+       /""""""""""""""""___/ ===
+  ~~~ {~~ ~~~~ ~~~ ~~~~ ~~ ~ /  ===- ~~~
+       \______ o          __/
+        \    \        __/
+          \____\______/
 
 ```
 
@@ -202,26 +202,26 @@ du conteneur linké dans l'autre conteneur)
 - Récupérer une image:
 
 ```
-docker pull ubuntu:15.04
+docker image pull ubuntu:15.04
 ```
 
 - Lancer une instance:
 
 ```
-docker run --rm -it ubuntu:15.04 bash
+docker container run --rm -it ubuntu:15.04 bash
 ```
 
 - Lister les instances:
 
 ```
-docker ps
+docker container ls
 ```
 
 - Démarrer / Arrêter une instance:
 
 ```
-docker stop  <container-name-or-id>
-docker start <container-name-or-id>
+docker container stop  <container-name-or-id>
+docker container start <container-name-or-id>
 ```
 
 
