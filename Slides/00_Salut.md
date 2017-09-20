@@ -6,25 +6,17 @@
 
 <!-- .slide: class="page-title" -->
 
-Slides forked from @m_pousse, @ggerbaud, @jlandure, @Nebounet, @acogoluegnes - Zenika Rennes, Nantes & Lyon
 
 
+## Julien Landuré - @jlandure
 
-## @ggerbaud
+- Formateur Docker, Google Cloud, Pivotal CF @Zenika
+- CTO Zenika Nantes
+- Dév Java / Web / NodeJS / <span style="font-size: 0.5em; vertical-align: bottom;"> Go</span> ⇨ Microservices ⇨ Docker
+- Dev ⇨ <span style="font-size: 0.5em; vertical-align: bottom;">Ops</span>
 
-- Guillaume Gerbaud
-- Formateur Docker @zenika
-- SI Zenika
-- Java ⇨ Microservices ⇨ Docker
-- Dev ⇨ <span style="font-size: 0.5em">Ops</span>
+## Fabien Juif - @fabienjuif
 
-
-
-
-## @srevereault
-
-- Sylvain Révéreault
-- Consultant DevOps, Infra as Code, Cloud Computing
-- Directeur technique Zenika Rennes
-- (presque) Formateur Docker @zenika
-- Ops ⇨ <span style="font-size: 0.5em">Dev</span>
+- Formateur Web (JS, React, Typescript, Node) @Zenika
+- Développeur Fullstack JS
+- ❤️ Docker : Dev ⇨ <span style="font-size: 0.5em; vertical-align: bottom;">Ops</span>
