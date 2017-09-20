@@ -78,16 +78,27 @@ Avantages d'utiliser Docker en production :
 - Atelier "Dockeriser mon app pour le Dev" : 2 à 3j
 - Atelier "Sensibilisation Docker pour les Ops " : 1 à 2j
 
-<figure style="position: absolute; bottom: 80px; right: 180px">
-	<img src="ressources/atzparis.png" alt="Logo Docker" width="750" />
+<figure style="position: absolute; bottom: 180px; right: 180px">
+  <img src="ressources/docker-z-training.png" alt="Docker" width="800" />
 </figure>
 
 
 
-# Docker Birthday #3 <br/> 21-26th March
+# DockerCon Europe 2017
 
 <figure style="position: absolute; bottom: 80px; right: 180px">
-  <img src="ressources/docker-birthday3.png" alt="birthday Docker" width="750" />
+  <img src="ressources/dockerconeu17.png" alt="birthday Docker" width="750" />
+</figure>
+
+
+
+# Le mot de la fin : DevOps, pas DevOps
+
+<figure style="position: absolute; bottom: 180px; left: 250px">
+  <img src="ressources/commitstrip-docker-devops1.png" alt="Docker" />
+</figure>
+<figure style="position: absolute; bottom: 180px; right: 250px">
+  <img src="ressources/commitstrip-docker-devops2.png" alt="Docker" />
 </figure>
 
 

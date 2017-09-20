@@ -17,7 +17,7 @@ L'ensemble des outils ci après sont OSS et gratuits
 
 
 
-## Use case
+## Cas d'utilisation
 
 Permet de démarrer plusieurs conteneurs simultanément
 
@@ -75,19 +75,11 @@ redis:
 
 
 
-# docker machine, cas d'utilisation
-
-<br/><br/><br/><br/><br/><br/>
-Pour utiliser Docker facilement sous Mac et Windows
-
-Pour installer Docker sur des machines distantes (des "machines")
-
-
-
 # docker machine
 
-<br/><br/><br/><br/><br/>
-Installation et configuration simple pour Linux, Windows, MacOS, Google, AWS, ...
+- Cas d'utilisation
+  - Pour utiliser Docker facilement sous Mac et Windows
+  - Pour installer Docker sur des machines distantes (des "machines") : Google, AWS...
 
 <figure style="position: absolute; bottom: 50px; right: 150px">
     <img src="https://docs.docker.com/engine/installation/images/linux_docker_host.svg" alt="Logo Docker" />
