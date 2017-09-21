@@ -13,7 +13,6 @@
 - **décembre 2013:** Google Compute Engine supporte Docker
 - **avril 2014:** Amazon Web Service supporte Docker
 - **octobre 2014:** Partenariat avec Microsoft
-- **juin 2017:** Docker 17.03
 
 
 

@@ -136,6 +136,46 @@ cd ..
 ## DEMO 5 : Swarm
 
 ```bash
+export AWS_ACCESS_KEY_ID=AKIAIWG6AAY3WCF6QYCQ
+export AWS_SECRET_ACCESS_KEY=X
+export AWS_DEFAULT_REGION=eu-west-2
+docker-machine create --driver amazonec2 aws01
+docker-machine create --driver amazonec2 aws02
+eval $(docker-machine env aws01)
+# attentio, docker-machine met mal les autorisations réseau sous aws
+# => https://gist.github.com/ghoranyi/f2970d6ab2408a8a37dbe8d42af4f0a5
+# montrer qu'on pointe sur cette machine (chercher Operating System: Ubuntu 16.04)
+docker info
+docker node ls
+# avoir l'ip de aws1 : 
+docker-machine ip aws01
+docker swarm init --advertise-addr <ip aws01>
+docker node ls
+# voir docker info pour montrer Swarm: Active
+docker info
+# ajoutons un worker
+docker swarm join-token worker
+# on se connecte à l'autre machine
+eval $(docker-machine env aws02)
+# on lance la commande obtenu avec le join-token
+docker swarm join --token ... --advertise-addr  <ip aws02> 
+# tester
+docker service create --name ping alpine ping 8.8.8.8
+# on scale
+docker service ls
+docker service update xx --replicas 8
+# on peut exposer des ports 
+docker service create --name nginx --publish 8080:80 nginx
+docker service ps nginx
+# on le voit sur un noeud mais 
+# on peut y accéder à partir de plusieurs ip => route mesh
+cd ../04-Compose
+# penser à pusher l'appli compose web pour ne pas avoir ed "build"
+docker stack deploy -c docker-compose.yml myfirstswarmlab
+```
+
+OLD DEMO
+```bash
 # in host machine
 cd 05-Swarm
 eval $(docker-machine env --swarm demo-node1)

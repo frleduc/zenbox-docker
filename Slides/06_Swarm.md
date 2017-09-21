@@ -26,6 +26,12 @@
 
 
 
+## Clustering
+
+![](ressources/raft-and-gossip.png)
+
+
+
 ## Pour aller plus loin
 
 Très haute disponibilité / Service discovery
