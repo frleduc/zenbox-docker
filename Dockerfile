@@ -1,15 +1,14 @@
-FROM node:4.2.2
+FROM node:8.4
 
 WORKDIR /data
-
-RUN npm install -g grunt-cli
 
 COPY package.json package.json
 RUN npm install
 
+#Mandatory to display the slides... WTF????
+COPY .git .git
 COPY Slides Slides
+
 COPY Gruntfile.js Gruntfile.js
 
-RUN grunt package
-
-ENTRYPOINT ["grunt"]
+ENTRYPOINT ["./node_modules/.bin/grunt"]
