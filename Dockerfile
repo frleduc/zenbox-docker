@@ -1,4 +1,4 @@
-FROM node:8.4
+FROM zenika/alpine-node:8
 
 WORKDIR /data
 
